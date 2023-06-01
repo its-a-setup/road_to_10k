@@ -11,9 +11,9 @@
 </head>
 
 <body>
-    <div style="margin-top: 50px;" class="ui container">
+    <div style="margin-top: 50px; position:relative;" class="ui container">
         <h1 class="ui center aligned header">Road to 10k</h1>
-
+        <a href="/registration" class="ui green button" style="position:absolute;right:0;top:0">Log in / Sign up </a>
         <form class="ui form" action="/add" method="post">
             <div class="field">
                 <label>Session tag</label>
@@ -25,7 +25,7 @@
         <hr>
         <label>Sessions history</label>
         <hr>
-
+        
         {% for session in session_history %}
         <div class="ui segment">
             <p class="ui big header"> Worked on {{session.tag}} for {{session.time_passed}} on {{session.created_at}} </p>
